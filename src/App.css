@@ -1,0 +1,106 @@
+:root {
+  --color-black: #000;
+  --color-green: teal;
+  --color-gray: #f0eeee;
+  --color-dark-gray: #777;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.25%;
+}
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  width: 100%;
+}
+button {
+  cursor: pointer;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+header {
+  width: 100%;
+  position: fixed;
+}
+nav {
+  background-color: var(--color-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* background-color: var(--color-gray); */
+  padding: 0 10px;
+}
+
+.search__input {
+  border: none;
+  padding: 0.7rem 2rem;
+  width: 160px;
+  border-radius: 100px;
+  background-color: var(--color-gray);
+  margin-right: -30px;
+}
+
+.search__input:focus {
+  outline: none;
+  width: 300px;
+  transition: all 0.2s;
+  /* put a delay on animation */
+}
+
+.search__button {
+  border: none;
+  background-color: transparent;
+  padding: 0.3rem;
+  outline: none;
+  z-index:10
+}
+
+.search__button > * {
+  pointer-events: none;
+}
+.search__button svg {
+  fill: var(--color-dark-gray);
+}
+
+main {
+  padding: 100px 100px 0 100px;
+}
+.results__container__search {
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-green);
+}
+
+.results__container__results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  border: 1px solid var(--color-green);
+  width: 100px;
+  margin: 1rem;
+  padding: 5px;
+  background-color: var(--color-gray);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.card__title {
+  margin-top: 5px;
+}
